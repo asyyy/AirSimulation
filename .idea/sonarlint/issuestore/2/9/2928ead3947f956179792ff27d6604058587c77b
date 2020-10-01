@@ -1,0 +1,42 @@
+
+0
+java:S1220""Move this file to a named package.
+k	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇöïŠúÿÿÿÿ
+™
+java:S1130&"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(«½øùÿÿÿÿ8âÿ¥Í.
+[	java:S106Š"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ8‚¢òØÍ.
+E
+java:S1066Z"/Merge this if statement with the enclosing one.(’ç•Õ
+[	java:S106‡"9Replace this use of System.out or System.err by a logger.(ÍÀ³úÿÿÿÿ8´«¦ÙÍ.
+F
+java:S1604ú"(Make this anonymous inner class a lambda(®éĞû8Œå˜ÙÍ.
+J
+java:S1481n"(Remove this unused "max" local variable.(¥ğ¤ıÿÿÿÿ8ç¼Ø¥Í.
+d
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Œå˜ÙÍ.
+”
+java:S1130G"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(áˆ–°8ğşÄ£Í.
+J
+java:S10669"/Merge this if statement with the enclosing one.(Æ²êûøÿÿÿÿ
+[	java:S106–"9Replace this use of System.out or System.err by a logger.(Å­Ëİúÿÿÿÿ8‚¢òØÍ.
+[	java:S106ñ"9Replace this use of System.out or System.err by a logger.(¾ğŒŒûÿÿÿÿ8¿ÃÜ¥Í.
+^	java:S125"<This block of commented-out lines of code should be removed.(¨ç¨İÿÿÿÿÿ8ÁÇæØÍ.
+T
+java:S1144¼"1Remove this unused private "verification" method.(ÁÏ£êüÿÿÿÿ8Î”ØÍ.
+“
+java:S1130j"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(öïÙ[8ÎÃèØÍ.
+š
+java:S1130Ó"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Ğ¢í»ıÿÿÿÿ8¿ÃÜ¥Í.
+F
+java:S1481m")Remove this unused "cond" local variable.(€õ¶8ÁÇæØÍ.
+<
+java:S1170"!Make this final field static too.(…Íÿÿÿÿÿ
+u
+java:S3776¼"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(ÁÏ£êüÿÿÿÿ8Ş•Ü¥Í.
+Y
+java:S1854n"7Remove this useless assignment to local variable "max".(¥ğ¤ıÿÿÿÿ8ç¼Ø¥Í.
+9
+java:S2119)"Save and re-use this "Random".(ÇöïŠúÿÿÿÿ
+9
+java:S2119l"Save and re-use this "Random".(ÇöïŠúÿÿÿÿ
+k	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇöïŠúÿÿÿÿ

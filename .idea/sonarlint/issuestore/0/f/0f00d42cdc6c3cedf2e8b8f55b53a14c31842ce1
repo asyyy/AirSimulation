@@ -1,0 +1,31 @@
+
+T	java:S106œ"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+4
+java:S2178o"Correct this "&" to "&&".(ùÕÿùÿÿÿÿ
+O	java:S106—"9Replace this use of System.out or System.err by a logger.(ªÔ×®
+n
+java:S2975Z"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(¯ÔÚ“ùÿÿÿÿ
+c
+java:S1182Z"HUse super.clone() to create and seed the cloned instance to be returned.(¯ÔÚ“ùÿÿÿÿ
+:
+java:S2097`"Add a type test to this method.(¥Ìí¥ıÿÿÿÿ
+T	java:S106•"9Replace this use of System.out or System.err by a logger.(¹ªÙ‚şÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+4
+java:S2178k"Correct this "&" to "&&".(ı£ÿÿÿÿÿ
+N	java:S106’"9Replace this use of System.out or System.err by a logger.(£»„%
+4
+java:S2178m"Correct this "&" to "&&".(Ó†ÍÎüÿÿÿÿ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Ó¬¢¯ıÿÿÿÿ
+4
+java:S2178n"Correct this "&" to "&&".(¯Ÿú€ùÿÿÿÿ
+4
+java:S2178l"Correct this "&" to "&&".(·ÔŠ¹ÿÿÿÿÿ
+T	java:S106™"9Replace this use of System.out or System.err by a logger.(é¥Æüşÿÿÿÿ
+O	java:S106›"9Replace this use of System.out or System.err by a logger.(È¾è†
+T	java:S106–"9Replace this use of System.out or System.err by a logger.(»¡Ğşÿÿÿÿ
+k
+java:S1192“"TDefine a constant instead of duplicating this literal "Testing 'equals' : " 3 times.(·ƒ·ã
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Á‰ş£øÿÿÿÿ
+O	java:S106“"9Replace this use of System.out or System.err by a logger.(·ƒ·ã
