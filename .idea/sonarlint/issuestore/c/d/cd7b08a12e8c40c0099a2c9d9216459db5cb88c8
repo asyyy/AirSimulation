@@ -1,84 +1,87 @@
 
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì …‡
-3
-java:S1643±"Use a StringBuilder instead.(ñäÕ‚
-T	java:S106¤"9Replace this use of System.out or System.err by a logger.(íİË°üÿÿÿÿ
-[	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(ŞŠ¢†
-[	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ºíËı
-g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¦À
-O	java:S106›"9Replace this use of System.out or System.err by a logger.(Ú²ú
-a	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(Óêµıÿÿÿÿ
-Z	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Û«¬'
-0
-java:S1220""Move this file to a named package.
-8
-java:S1643Ü"Use a StringBuilder instead.(ìÖÁÖıÿÿÿÿ
-F
-java:S1066Ä"/Merge this if statement with the enclosing one.(Ëñİ
-8
-java:S1643ç"Use a StringBuilder instead.(âÔ©¬üÿÿÿÿ
-A
-java:S3077"&Use an "AtomicReferenceArray" instead.(ò‡«ˆıÿÿÿÿ
-O	java:S106œ"9Replace this use of System.out or System.err by a logger.(Ø¹”
-T	java:S106‡"9Replace this use of System.out or System.err by a logger.(¯†Êíıÿÿÿÿ
-\	java:S112ˆ"FDefine and throw a dedicated exception instead of using a generic one.(à »Á
-O	java:S106§"9Replace this use of System.out or System.err by a logger.(õ›Áë
-O	java:S106¡"9Replace this use of System.out or System.err by a logger.(ó±Äè
-T	java:S106ª"9Replace this use of System.out or System.err by a logger.(°Ü³ïÿÿÿÿÿ
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(£™“
-3
-java:S1643ë"Use a StringBuilder instead.(Õ‹óè
-3
-java:S1643Æ"Use a StringBuilder instead.(€İŞş
-8
-java:S1643Ó"Use a StringBuilder instead.(ìÁ¨ûÿÿÿÿ
-a	java:S112†"FDefine and throw a dedicated exception instead of using a generic one.(ÕòßØüÿÿÿÿ
 T	java:S106¯"9Replace this use of System.out or System.err by a logger.(§„¾Íùÿÿÿÿ
-T	java:S106"9Replace this use of System.out or System.err by a logger.(‚¹†úÿÿÿÿ
-t
-java:S30128"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ß§Ò‚ıÿÿÿÿ
-‹
-java:S1319a"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢òĞ”üÿÿÿÿ
+T	java:S106ª"9Replace this use of System.out or System.err by a logger.(°Ü³ïÿÿÿÿÿ
 O	java:S106 "9Replace this use of System.out or System.err by a logger.(ÚƒÓÙ
-E
-java:S1066Ğ"/Merge this if statement with the enclosing one.(Í« #
-3
-java:S1643ü"Use a StringBuilder instead.(€İŞş
-T	java:S106£"9Replace this use of System.out or System.err by a logger.(‡ĞĞùıÿÿÿÿ
-T	java:S106­"9Replace this use of System.out or System.err by a logger.(‹®¦ÿÿÿÿÿ
 3
 java:S1643ã"Use a StringBuilder instead.(¶¦É°
-K
-java:S1066±"/Merge this if statement with the enclosing one.(Ëı ¶øÿÿÿÿ
-3
-java:S1643÷"Use a StringBuilder instead.(ŠĞè 
-l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö‚äÒüÿÿÿÿ
-`	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(éÙ¸Ïûÿÿÿÿ
-9
-java:S1659‰""Declare "mffl" on a separate line.(„é°É
-X
-java:S2259¡"AA "NullPointerException" could be thrown; "mff" is nullable here.(ó±Äè
-[	java:S112í"FDefine and throw a dedicated exception instead of using a generic one.(í‰4
-3
-java:S1643ï"Use a StringBuilder instead.(ö§ÆË
-3
-java:S1643Ò"Use a StringBuilder instead.(ÈÊ™
-\	java:S112Ñ"FDefine and throw a dedicated exception instead of using a generic one.(›ùŒ‹
-a	java:S112„"FDefine and throw a dedicated exception instead of using a generic one.(¸—Åûÿÿÿÿ
-T	java:S106˜"9Replace this use of System.out or System.err by a logger.(İÓÊªşÿÿÿÿ
-3
-java:S1643Á"Use a StringBuilder instead.(ŠĞè 
-o
-java:S2293c"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆÇÿ‰
-n
-java:S3776¸"RRefactor this method to reduce its Cognitive Complexity from 43 to the 15 allowed.(ßÔü²şÿÿÿÿ
-‚
-java:S2178"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(‚¹†úÿÿÿÿ
-d
-java:S2184"FCast one of the operands of this multiplication operation to a "long".(ì …‡8ôşÄ£Í.
-T	java:S106¥"9Replace this use of System.out or System.err by a logger.(äåµÏûÿÿÿÿ
-T	java:S106©"9Replace this use of System.out or System.err by a logger.(Ç‡Ö³şÿÿÿÿ
+E
+java:S1066Ğ"/Merge this if statement with the enclosing one.(Í« #
 8
 java:S1643å"Use a StringBuilder instead.(ˆÄœ³ÿÿÿÿÿ
+3
+java:S1643Á"Use a StringBuilder instead.(ŠĞè 
+0
+java:S1220""Move this file to a named package.
+F
+java:S1066Ä"/Merge this if statement with the enclosing one.(Ëñİ
+3
+java:S1643÷"Use a StringBuilder instead.(ŠĞè 
+9
+java:S1659‰""Declare "mffl" on a separate line.(„é°É
+a	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(Óêµıÿÿÿÿ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(£™“
+K
+java:S1066±"/Merge this if statement with the enclosing one.(Ëı ¶øÿÿÿÿ
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì …‡
+X
+java:S2259¡"AA "NullPointerException" could be thrown; "mff" is nullable here.(ó±Äè
+3
+java:S1643Ò"Use a StringBuilder instead.(ÈÊ™
+a	java:S112†"FDefine and throw a dedicated exception instead of using a generic one.(ÕòßØüÿÿÿÿ
+8
+java:S1643Ó"Use a StringBuilder instead.(ìÁ¨ûÿÿÿÿ
+3
+java:S1643Æ"Use a StringBuilder instead.(€İŞş
+o
+java:S2293c"YReplace the type specification in this constructor call with the diamond operator ("<>").(ˆÇÿ‰
+[	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(ŞŠ¢†
+3
+java:S1643±"Use a StringBuilder instead.(ñäÕ‚
+3
+java:S1643ï"Use a StringBuilder instead.(ö§ÆË
+g	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ı¦À
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(¯†Êíıÿÿÿÿ
+3
+java:S1643ü"Use a StringBuilder instead.(€İŞş
+T	java:S106"9Replace this use of System.out or System.err by a logger.(‚¹†úÿÿÿÿ
+\	java:S112Ñ"FDefine and throw a dedicated exception instead of using a generic one.(›ùŒ‹
+n
+java:S3776¸"RRefactor this method to reduce its Cognitive Complexity from 43 to the 15 allowed.(ßÔü²şÿÿÿÿ
+‹
+java:S1319a"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢òĞ”üÿÿÿÿ
+\	java:S112ˆ"FDefine and throw a dedicated exception instead of using a generic one.(à »Á
+a	java:S112„"FDefine and throw a dedicated exception instead of using a generic one.(¸—Åûÿÿÿÿ
+O	java:S106›"9Replace this use of System.out or System.err by a logger.(Ú²ú
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(Ø¹”
+T	java:S106¥"9Replace this use of System.out or System.err by a logger.(äåµÏûÿÿÿÿ
 _
 java:S1192ã"HDefine a constant instead of duplicating this literal "\033[0m" 3 times.(¶¦É°
+T	java:S106©"9Replace this use of System.out or System.err by a logger.(Ç‡Ö³şÿÿÿÿ
+8
+java:S1643ç"Use a StringBuilder instead.(âÔ©¬üÿÿÿÿ
+O	java:S106§"9Replace this use of System.out or System.err by a logger.(õ›Áë
+T	java:S106¤"9Replace this use of System.out or System.err by a logger.(íİË°üÿÿÿÿ
+Z	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Û«¬'
+[	java:S112í"FDefine and throw a dedicated exception instead of using a generic one.(í‰4
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(İÓÊªşÿÿÿÿ
+3
+java:S1643ë"Use a StringBuilder instead.(Õ‹óè
+O	java:S106¡"9Replace this use of System.out or System.err by a logger.(ó±Äè
+X
+java:S1128
+";Remove this unused import 'java.util.concurrent.Semaphore'.(î¸Îú8­ª¡¢Î.
+l	java:S117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö‚äÒüÿÿÿÿ
+‚
+java:S2178"fCorrect this "&" to "&&" and extract the right operand to a variable if it should always be evaluated.(‚¹†úÿÿÿÿ
+`	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(éÙ¸Ïûÿÿÿÿ
+t
+java:S30128"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ß§Ò‚ıÿÿÿÿ
+A
+java:S3077"&Use an "AtomicReferenceArray" instead.(ò‡«ˆıÿÿÿÿ
+d
+java:S2184"FCast one of the operands of this multiplication operation to a "long".(ì …‡8ôşÄ£Í.
+[	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ºíËı
+T	java:S106­"9Replace this use of System.out or System.err by a logger.(‹®¦ÿÿÿÿÿ
+T	java:S106£"9Replace this use of System.out or System.err by a logger.(‡ĞĞùıÿÿÿÿ
+8
+java:S1643Ü"Use a StringBuilder instead.(ìÖÁÖıÿÿÿÿ

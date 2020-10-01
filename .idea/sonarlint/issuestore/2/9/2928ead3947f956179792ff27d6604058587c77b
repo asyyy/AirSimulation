@@ -1,42 +1,65 @@
 
+u
+java:S3776â"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(±Îàèþÿÿÿÿ8¶“Ë¤Î.
+^	java:S125¦"<This block of commented-out lines of code should be removed.(ÁÏ£êüÿÿÿÿ8¼÷À Î.
+™
+java:S1130("wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(«½øùÿÿÿÿ8âÿ¥Í.
+~
+java:S1217Ü"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(ÊÊ•–8¶“Ë¤Î.
+J
+java:S1066;"/Merge this if statement with the enclosing one.(Æ²êûøÿÿÿÿ
+E
+java:S1066\"/Merge this if statement with the enclosing one.(’ç•Õ
+”
+java:S1130I"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(áˆ–°8ðþÄ£Í.
 0
 java:S1220""Move this file to a named package.
-k	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇöïŠúÿÿÿÿ
-™
-java:S1130&"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(«½øùÿÿÿÿ8âÿ¥Í.
-[	java:S106Š"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ8‚¢òØÍ.
-E
-java:S1066Z"/Merge this if statement with the enclosing one.(’ç•Õ
-[	java:S106‡"9Replace this use of System.out or System.err by a logger.(ÍÀ³úÿÿÿÿ8´«¦ÙÍ.
-F
-java:S1604ú"(Make this anonymous inner class a lambda(®éÐû8Œå˜ÙÍ.
-J
-java:S1481n"(Remove this unused "max" local variable.(¥ð¤ýÿÿÿÿ8ç¼Ø¥Í.
 d
-java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Œå˜ÙÍ.
-”
-java:S1130G"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(áˆ–°8ðþÄ£Í.
-J
-java:S10669"/Merge this if statement with the enclosing one.(Æ²êûøÿÿÿÿ
-[	java:S106–"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ8‚¢òØÍ.
-[	java:S106ñ"9Replace this use of System.out or System.err by a logger.(¾ðŒŒûÿÿÿÿ8¿ÃÜ¥Í.
-^	java:S125Ž"<This block of commented-out lines of code should be removed.(¨ç¨Ýÿÿÿÿÿ8ÁÇæØÍ.
-T
-java:S1144¼"1Remove this unused private "verification" method.(ÁÏ£êüÿÿÿÿ8ÎŽ”ØÍ.
-“
-java:S1130j"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(öïÙ[8ÎÃèØÍ.
-š
-java:S1130Ó"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Ð¢í»ýÿÿÿÿ8¿ÃÜ¥Í.
+java:S2142À"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¶“Ë¤Î.
+~
+java:S1217œ"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(Î«úÎ8éüÌ¤Î.
+d
+java:S2142‚"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8éüÌ¤Î.
+[	java:S106ä"9Replace this use of System.out or System.err by a logger.(ÝßÅŒýÿÿÿÿ8”§³¤Î.
 F
-java:S1481m")Remove this unused "cond" local variable.(€õž¶8ÁÇæØÍ.
+java:S1481o")Remove this unused "cond" local variable.(€õž¶8ÁÇæØÍ.
+9
+java:S2119n"Save and re-use this "Random".(ÇöïŠúÿÿÿÿ
+k	java:S117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇöïŠúÿÿÿÿ
+d
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8éüÌ¤Î.
+[	java:S106£"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ8—÷¥¢Î.
 <
-java:S1170"!Make this final field static too.(…Íÿÿÿÿÿ
-u
-java:S3776¼"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(ÁÏ£êüÿÿÿÿ8Þ•Ü¥Í.
+java:S1170"!Make this final field static too.(…Íÿÿÿÿÿ
+[	java:S106â"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ8—÷¥¢Î.
+d
+java:S2142ô"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8éüÌ¤Î.
+J
+java:S1481p"(Remove this unused "max" local variable.(¥ð¤ýÿÿÿÿ8ç¼Ø¥Í.
+Q
+java:S1128	"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8”§³¤Î.
+ƒ
+java:S1217Þ"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(Ø–¿Äÿÿÿÿÿ8¶“Ë¤Î.
+[	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(ÍÀ³úÿÿÿÿ8—÷¥¢Î.
+k	java:S117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇöïŠúÿÿÿÿ
+ƒ
+java:S1217"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(Ø–¿Äÿÿÿÿÿ8éüÌ¤Î.
+[	java:S106å"9Replace this use of System.out or System.err by a logger.(¾ðŒŒûÿÿÿÿ8‚Ð‰¡Î.
+^	java:S125—"<This block of commented-out lines of code should be removed.(ñÎþÆûÿÿÿÿ8éüÌ¤Î.
+d
+java:S2142Î"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¶“Ë¤Î.
 Y
-java:S1854n"7Remove this useless assignment to local variable "max".(¥ð¤ýÿÿÿÿ8ç¼Ø¥Í.
+java:S1854p"7Remove this useless assignment to local variable "max".(¥ð¤ýÿÿÿÿ8ç¼Ø¥Í.
+š
+java:S1130¾"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Ð¢í»ýÿÿÿÿ8Èëß Î.
+X	java:S125Ø"<This block of commented-out lines of code should be removed.(ôøÙS8¶“Ë¤Î.
+~
+java:S1217›"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(ÊÊ•–8éüÌ¤Î.
+~
+java:S1217Ý"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(Î«úÎ8¶“Ë¤Î.
 9
-java:S2119)"Save and re-use this "Random".(ÇöïŠúÿÿÿÿ
-9
-java:S2119l"Save and re-use this "Random".(ÇöïŠúÿÿÿÿ
-k	java:S117)"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÇöïŠúÿÿÿÿ
+java:S2119+"Save and re-use this "Random".(ÇöïŠúÿÿÿÿ
+“
+java:S1130l"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(öïÙ[8ÎÃèØÍ.
+d
+java:S2142²"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8¶“Ë¤Î.

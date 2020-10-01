@@ -19,7 +19,7 @@ public class Aircraft
    private int [] emergencyRow;
    private int nFreeSeats;
    private volatile Customer [][] seatMap;  // volatile allows seatMap to "permantly stay" in the RAM
-                                            // (and not in the cache of one of the cores)
+                                               // (and not in the cache of one of the cores)
    private boolean color = true;
    // Constructor 1 (explicit definition of main attributes)
    public Aircraft(int nRows,int nSeatsPerRow,int[] aisleSeat,int[] emergencyRow)

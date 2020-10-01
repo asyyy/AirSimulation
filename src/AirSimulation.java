@@ -6,9 +6,11 @@
  * AM
  */
 
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
 
 public class AirSimulation
 {
@@ -18,6 +20,7 @@ public class AirSimulation
    private int nAgent4;
    private Aircraft a;
    public final int nagents = 4;
+   Semaphore sem2 = new Semaphore(1);
 
    // Constructor
    public AirSimulation()
@@ -90,6 +93,7 @@ public class AirSimulation
                // if this is an emergency exit seat, and c needs assistence, then we skip
                if (!emergRows.contains(row) || !c.needsAssistence() || this.a.numberOfFreeSeats() <= this.a.getSeatsPerRow() * this.a.getNumberEmergencyRows())
                {
+
                   this.a.add(c,row,col);
                   placed = true;
                }
@@ -107,8 +111,6 @@ public class AirSimulation
    public void agent3() throws InterruptedException
    {
       Random R = new Random();
-      boolean cond = false;
-      int max = this.a.getNumberOfRows() * this.a.getSeatsPerRow();
 
       int row1;
       int col1;
@@ -119,15 +121,11 @@ public class AirSimulation
       do {
          row1 = R.nextInt(this.a.getNumberOfRows());
          col1 = R.nextInt(this.a.getSeatsPerRow());
-      }
-      while(this.a.isSeatEmpty(row1,col1));
 
-
-      do {
          row2 = R.nextInt(this.a.getNumberOfRows());
          col2 = R.nextInt(this.a.getSeatsPerRow());
       }
-      while(this.a.isSeatEmpty(row2,col2));
+      while(this.a.isSeatEmpty(row2,col2) || this.a.isSeatEmpty(row1,col1));
 
       if(row1 > row2){
          if(this.a.getCustomer(row1,col1).getFlyerLevel() < this.a.getCustomer(row2,col2).getFlyerLevel()){
@@ -152,38 +150,17 @@ public class AirSimulation
     * @param row2 allée du passager n°2
     * @param col2 colonne du passager n°2
     */
-   private void swap(int row1,int col1,int row2,int col2){
+   private void swap(int row1,int col1,int row2,int col2) throws InterruptedException {
       Customer c1 = this.a.getCustomer(row1,col1);
       Customer c2 = this.a.getCustomer(row2,col2);
+
       this.a.freeSeat(row1,col1);
       this.a.freeSeat(row2,col2);
 
       this.a.add(c1,row2,col2);
       this.a.add(c2,row1,col1);
+
    }
-   /*
-   private boolean verification(){
-      int maxRow = this.a.getNumberOfRows();
-      int maxCol = this.a.getSeatsPerRow();
-
-      for(int i = 0;i<maxRow;i++){
-         for(int j = 0; j<maxCol;j++) {
-            for (int k = i+1; k < maxRow; k++) {
-               for (int l = j+1; l < maxCol; l++) {
-                  if(!this.a.isSeatEmpty(i,j) && !this.a.isSeatEmpty(k,l)){
-                     Customer un = this.a.getCustomer(i,j);
-                     Customer deux = this.a.getCustomer(k,l);
-                     if(un.getFlyerLevel() < deux.getFlyerLevel()){
-                        return false;
-                     }
-                  }
-               }
-            }
-         }
-      }
-      return true;
-
-   }*/
 
    // Agent4: the virus
    public void agent4() throws InterruptedException
@@ -211,7 +188,71 @@ public class AirSimulation
       this.nAgent4 = 0;
       this.a.reset();
    }
+   public static class tAgent extends Thread{
+      Semaphore sem;
+      AirSimulation avion;
+      int numAgent;
+      public tAgent(Semaphore sem, AirSimulation avion, int i) {
+         this.sem = sem;
+         this.avion = avion;
+         this.numAgent=i;
+      }
 
+      @Override
+      public void run() {
+         try {
+            sem.acquire();
+            switch (numAgent){
+               case 1 : avion.agent1();
+                  break;
+               case 2 : avion.agent2();
+                  break;
+               case 3 : avion.agent3();
+                  break;
+               case 4 : avion.agent4();
+                  break;
+               default:
+                  throw new IllegalArgumentException("Agent " + numAgent + "inconnu au bataillon");
+
+            }
+            sem.release();
+
+         } catch (InterruptedException e) {
+            e.printStackTrace();
+         }
+
+      }
+   }
+   public static class tAgentWSem extends Thread{
+
+      AirSimulation avion;
+      int numAgent;
+      public tAgentWSem(AirSimulation avion, int i) {
+         this.avion = avion;
+         this.numAgent=i;
+      }
+      @Override
+      public void run() {
+         try {
+            switch (numAgent){
+               case 1 : avion.agent1();
+                  break;
+               case 2 : avion.agent2();
+                  break;
+               case 3 : avion.agent3();
+                  break;
+               case 4 : avion.agent4();
+                  break;
+               default:
+                  throw new IllegalArgumentException("Agent " + numAgent + "inconnu au bataillon");
+
+            }
+         } catch (InterruptedException e) {
+            e.printStackTrace();
+         }
+
+      }
+   }
    // Printing
    public String toString()
    {
@@ -224,60 +265,37 @@ public class AirSimulation
    // Simulation in sequential (main)
    public static void main(String[] args) throws InterruptedException
    {
-
+      long start = System.currentTimeMillis();
       System.out.println("\n** Sequential execution **\n");
       if (args != null && args.length > 0 && args[0] != null && args[0].equals("animation"))
       {
          AirSimulation s = new AirSimulation();
-         Semaphore sem = new Semaphore(1);
+
+         Semaphore sem = new Semaphore(1,true);
+         Thread t2 = new tAgent(sem,s,2);
+         Thread t3 = new tAgent(sem,s,3);
+         Thread t4 = new tAgent(sem,s,4);
+         /*
+         Thread t2 = new tAgentWSem(s,2);
+         Thread t3 = new tAgentWSem(s,3);
+         Thread t4 = new tAgentWSem(s,4);*/
+
          while (!s.a.isFlightFull())
          {
-            Thread t2 = new Thread() {
-
-               @Override
-               public void run() {
-                  try {
-                     sem.acquire();
-                     s.agent2();
-                     sem.release();
-                  } catch (InterruptedException e) {
-                     e.printStackTrace();
-                  }
-
-               }
-            };
-            Thread t3 = new Thread() {
-
-               @Override
-               public void run() {
-                  try {
-                     sem.acquire();
-                     s.agent3();
-                     sem.release();
-                  } catch (InterruptedException e) {
-                     e.printStackTrace();
-                  }
-
-               }
-            };
-            Thread t4 = new Thread() {
-
-               @Override
-               public void run() {
-                  try {
-                     sem.acquire();
-                     s.agent4();
-                     sem.release();
-                  } catch (InterruptedException e) {
-                     e.printStackTrace();
-                  }
-
-               }
-            };
+            /*
             s.agent1();
-            t2.run();
-            t3.run();
-            t4.run();
+            s.agent2();
+            s.agent3();
+            s.agent4();*/
+
+            sem.acquire();
+            s.agent1();
+            sem.release();
+
+
+            t2.start();
+            t3.start();
+            t4.start();
 
             System.out.println(s + s.a.cleanString());
             Thread.sleep(100);
@@ -285,64 +303,48 @@ public class AirSimulation
 
          System.out.println(s);
       }
+      ///////////////////////////////////////
       else
       {
          AirSimulation s = new AirSimulation();
-         Semaphore sem = new Semaphore(1);
-         Thread t2 = new Thread() {
 
-            @Override
-            public void run() {
-               try {
-                  sem.acquire();
-                  s.agent2();
-                  sem.release();
-               } catch (InterruptedException e) {
-                  e.printStackTrace();
-               }
+         Semaphore sem = new Semaphore(1,true);
+         Thread t2 = new tAgent(sem,s,2);
+         Thread t3 = new tAgent(sem,s,3);
+         Thread t4 = new tAgent(sem,s,4);
+         /*
+         Thread t2 = new tAgentWSem(s,2);
+         Thread t3 = new tAgentWSem(s,3);
+         Thread t4 = new tAgentWSem(s,4);*/
 
-            }
-         };
-         Thread t3 = new Thread() {
-
-            @Override
-            public void run() {
-               try {
-                  sem.acquire();
-                  s.agent3();
-                  sem.release();
-               } catch (InterruptedException e) {
-                  e.printStackTrace();
-               }
-
-            }
-         };
-         Thread t4 = new Thread() {
-
-            @Override
-            public void run() {
-               try {
-                  sem.acquire();
-                  s.agent4();
-                  sem.release();
-               } catch (InterruptedException e) {
-                  e.printStackTrace();
-               }
-
-            }
-         };
          while (!s.a.isFlightFull())
          {
+            /*
             s.agent1();
+            s.agent2();
+            s.agent3();
+            s.agent4();*/
+
+
+            sem.acquire();
+            s.agent1();
+            sem.release();
+
+
             t2.run();
             t3.run();
             t4.run();
+
 
          }
 
          System.out.println(s);
       }
+      long end = System.currentTimeMillis();
 
+      System.out.println("Start : " + start);
+      System.out.println("End : " + end);
+      System.out.println("Result = " + (end - start));
    }
 }
 

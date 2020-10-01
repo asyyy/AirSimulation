@@ -7,6 +7,7 @@
  */
 
 import java.util.Random;
+import java.util.concurrent.Semaphore;
 
 public class Customer
 {
@@ -24,6 +25,7 @@ public class Customer
       this.ticketNumber = ticketNumber;
       this.flightCost = flightCost;
       this.specialAssistence = specialAssistence;
+
    }
 
    // Constructor 2 (generates a Customer with random attributes, the input is the seed)
@@ -37,6 +39,7 @@ public class Customer
       double p = rand.nextDouble();
       this.specialAssistence = false;
       if (p < 0.2)  this.specialAssistence = true;
+
    }
 
    // Constructor 3 (generates a Customer with random attributes, the seed is random as well)
@@ -50,6 +53,7 @@ public class Customer
       double p = rand.nextDouble();
       this.specialAssistence = false;
       if (p < 0.2)  this.specialAssistence = true;
+
    }
 
    // Get Customer Flyer Level
